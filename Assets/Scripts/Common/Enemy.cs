@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] int _damageAmount = 1;
     [SerializeField] ParticleSystem _impactParticles;
-    [SerializeField] AudioClip _impactSound;
+    [SerializeField] AudioClip _impactSound = null;
     
     Rigidbody _rb;
 
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
         }
 
         // audio. TODO - consider Object pooling for Performance 
-        if (_impactParticles != null)
+        if (_impactSound != null)
         {
             AudioHelper.PlayClip2D(_impactSound, 1f);
         }

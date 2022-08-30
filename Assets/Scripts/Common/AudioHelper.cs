@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioHelper : MonoBehaviour
+public static class AudioHelper
 {
     public static AudioSource PlayClip2D(AudioClip clip, float volume)
     {
