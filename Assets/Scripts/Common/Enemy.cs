@@ -28,8 +28,13 @@ public class Enemy : MonoBehaviour
 
         
     }
-    public virtual void PlayerImpact(Player player) // when emeny collider is touched by another dynmaic collider check for player script if does regesiter hit. 
+    protected virtual void PlayerImpact(Player player) // when emeny collider is touched by another dynmaic collider check for player script if does regesiter hit. 
     { // The term virtual lets the derived class or classes change the function, if they want. 
+
+        //protected: Allow a member item to only be accessed from internal or derived source.
+
+        //private: Allow a member item to only be accessed from its owner.
+
         player.DecreaseHealth(_damageAmount);
     }
 
