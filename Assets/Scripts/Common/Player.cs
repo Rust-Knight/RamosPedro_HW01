@@ -51,4 +51,9 @@ public class Player : MonoBehaviour
     {
         ScoreManager.instance.AddPoint();
     }
+
+    public void slowPlayer()
+    {
+
+    }
 }

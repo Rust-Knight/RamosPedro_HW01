@@ -12,6 +12,16 @@ public class TankController : MonoBehaviour
         set => _maxSpeed = value;
     }
 
+    [SerializeField] float _minSpeed = .1f;
+    public float MinSpeed
+    {
+        get => _minSpeed;
+        set => _minSpeed = value;
+    }
+
+
+
+
     [SerializeField] float _moveSpeed = .25f;
     [SerializeField] float _turnSpeed = 2f;
 
