@@ -6,7 +6,7 @@ public class SpeedIncrease : CollectibleBase
 {
     [SerializeField] float _speedAmount = 5;
 
-    protected override void Collect (Player player)
+    protected override void Collect(Player player)
     {
         TankController controller = player.GetComponent<TankController>();
         if(controller != null)
@@ -14,4 +14,14 @@ public class SpeedIncrease : CollectibleBase
             controller.MaxSpeed += _speedAmount;
         }
     }
+
+    protected override void Movement(Rigidbody rb)
+    {
+        // calculate rotation 
+
+        Quaternion turnOffset = Quaternion.Euler
+            (MovementSpeed, MovementSpeed, MovementSpeed);
+        rb.MoveRotation(rb.rotation * turnOffset);
+    }
+
 }

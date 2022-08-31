@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class TankController : MonoBehaviour
 {
+
+    [SerializeField] float _maxSpeed = .25f; //.25f
+    public float MaxSpeed
+    {
+        get => _maxSpeed; // => : “lambda operator” calls the code after in an anonymos function. 
+        set => _maxSpeed = value;
+    }
+
     [SerializeField] float _moveSpeed = .25f;
     [SerializeField] float _turnSpeed = 2f;
 

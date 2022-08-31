@@ -47,4 +47,8 @@ public class Player : MonoBehaviour
         // play sound
     }
 
+    public void addCoinPoints()
+    {
+        ScoreManager.instance.AddPoint();
+    }
 }
